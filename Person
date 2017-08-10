@@ -1,0 +1,57 @@
+/* © Sarah Bean
+ * This program will display instances of class Person
+ * along with constructors, getters and setters, and a
+ * toString method to be used by another program TestPerson*/
+
+
+
+public class Person {
+    
+    // define private fields
+    private String fullName;
+    private char gender;
+    private int age;
+   
+    //define public fields
+    public static int numFriends = 0;
+   
+    //create a constructor
+    Person(String fullName, char gender, int age) {
+    	this.fullName = fullName;
+        this.gender = gender;
+        this.age = age;           
+        numFriends++;
+                   
+    }
+    //generate getters and setters
+    public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	Person() {
+	}
+	// display the state of a Person instance with toString method
+	 @Override
+    public String toString() {
+		 return "Full Name=" + fullName + ", Gender=" + gender + ", Age=" + Integer.toString(age);
+    }
+}
